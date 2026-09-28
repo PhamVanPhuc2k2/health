@@ -1,0 +1,129 @@
+#back-top {
+    position: fixed;
+    right: 1rem;
+    bottom: 2rem;
+    z-index: 80;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: #fb0505;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.6s;
+    user-select: none;
+
+    img {
+        width: 14px;
+    }
+}
+
+// nut tong dai noi (nhu trang mau) -> trang Thong tin bo sung
+.hotline-fixed {
+    position: fixed;
+    right: 14px;
+    bottom: 90px;
+    z-index: 80;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 82px;
+    height: 62px;
+    border: 3px solid #fff;
+    border-radius: 16px;
+    background-image: linear-gradient(160deg, #36a3e6 0%, $blue-dark 100%);
+    box-shadow: 0 8px 22px rgba(8, 108, 183, 0.45);
+    animation: hotline-ring 2.8s ease-in-out infinite;
+
+    img {
+        width: 38px;
+        height: 38px;
+        object-fit: contain;
+    }
+
+    &__tip {
+        position: absolute;
+        right: calc(100% + 10px);
+        padding: 6px 12px;
+        border-radius: 8px;
+        font-size: 13px;
+        font-weight: 700;
+        color: #fff;
+        white-space: nowrap;
+        background-color: $navy;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+        pointer-events: none;
+    }
+
+    &:hover &__tip {
+        opacity: 1;
+    }
+}
+
+@keyframes hotline-ring {
+    0%, 86%, 100% { transform: rotate(0); }
+    89% { transform: rotate(-8deg); }
+    92% { transform: rotate(8deg); }
+    95% { transform: rotate(-5deg); }
+}
+
+// banner cuoi trang (giong ban goc)
+.main-quinary {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    img {
+        border-radius: 12px;
+    }
+}
+
+.footer {
+    color: #d7e6f7;
+    background-color: $navy;
+
+    &-top {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr 1fr;
+        gap: 40px;
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+
+    &-logo img {
+        width: auto;
+        height: 70px;
+    }
+
+    &-des {
+        margin-top: 14px;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    &-title {
+        margin-bottom: 12px;
+        font-size: 15px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    &-links {
+        display: grid;
+        gap: 8px;
+        font-size: 15px;
+
+        a:hover {
+            color: #fff200;
+        }
+    }
+
+    &-text {
+        padding: 14px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+}

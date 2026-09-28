@@ -1,0 +1,15 @@
+// Mau chuong lay theo trang mo dau tung chuong trong file PDF so tay.
+// light: nen banner, main: khoi tieu de / anh / vien cau hoi.
+$chapters: (
+    "0": (light: #7aa9d7, main: #1e73be),  // gioi thieu
+    "1": (light: #8fd3c7, main: #23a88f),  // co so y te & bao hiem
+    "2": (light: #f5a9c8, main: #e8639a),  // an toan lao dong
+    "3": (light: #8fd6f5, main: #20a9e0),  // cham soc suc khoe & moi truong
+    "4": (light: #c3a6d6, main: #9464b4),  // phong ngua benh tat
+    "5": (light: #f6c664, main: #f0a92e),  // thong tin bo sung (duong day nong)
+);
+
+$blue: #0c96d4;
+$blue-dark: #086cb7;
+$navy: #0a4595;
+$text: #192a3d;

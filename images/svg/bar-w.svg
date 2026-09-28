@@ -1,0 +1,20 @@
+<svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="12"
+                                        viewBox="0 0 16 12"
+                                        fill="none"
+                                    >
+                                        <path
+                                            d="M15 5H1C0.4 5 0 5.4 0 6C0 6.6 0.4 7 1 7H15C15.6 7 16 6.6 16 6C16 5.4 15.6 5 15 5Z"
+                                            fill="#fff"
+                                        ></path>
+                                        <path
+                                            d="M15 0H1C0.4 0 0 0.4 0 1C0 1.6 0.4 2 1 2H15C15.6 2 16 1.6 16 1C16 0.4 15.6 0 15 0Z"
+                                            fill="#fff"
+                                        ></path>
+                                        <path
+                                            d="M15 10H1C0.4 10 0 10.4 0 11C0 11.6 0.4 12 1 12H15C15.6 12 16 11.6 16 11C16 10.4 15.6 10 15 10Z"
+                                            fill="#fff"
+                                        ></path>
+                                    </svg>

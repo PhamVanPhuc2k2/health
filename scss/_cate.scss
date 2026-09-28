@@ -1,0 +1,725 @@
+// chapter
+.chapter-primary {
+    &__container {
+        min-height: 300px;
+    }
+
+    &__content {
+        padding-right: 170px;
+    }
+
+    &__heading {
+        font-size: 28px;
+
+        &-inner {
+            border-radius: 0px 0px 100px 0px;
+            padding: 20px 70px 20px 30px;
+            display: inline-block;
+            line-height: 1;
+        }
+    }
+
+    &__title {
+        font-size: 28px;
+        margin-top: 20px;
+    }
+
+    &__meta {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px 20px;
+        margin-top: 20px;
+        font-size: 16px;
+        font-weight: 500;
+        color: #fff;
+
+        a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 18px;
+            border-radius: 999px;
+            color: $text;
+            background-color: #fff;
+            font-weight: 600;
+
+            &:hover {
+                color: $text;
+                opacity: 0.9;
+            }
+        }
+    }
+
+    &__img {
+        width: 300px;
+        min-height: 300px;
+        display: flex;
+        padding: 10px;
+
+        img {
+            width: 80%;
+            height: auto;
+            max-height: 260px;
+            object-fit: contain;
+            margin: auto;
+        }
+    }
+
+    @each $key, $c in $chapters {
+        &--#{$key} {
+            background-color: map-get($c, light);
+
+            .chapter-primary__heading-inner,
+            .chapter-primary__img {
+                background-color: map-get($c, main);
+            }
+        }
+    }
+}
+
+.chapter-secondary {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #fff;
+
+    a {
+        color: #1e73be;
+    }
+
+    &__left {
+        width: 23%;
+    }
+
+    // muc luc dinh khi cuon (desktop)
+    &__tableOfContent {
+        position: sticky;
+        top: 100px;
+        max-height: calc(100vh - 120px);
+        overflow: auto;
+
+        .tableOfContent-headingParent {
+            text-decoration: underline;
+        }
+
+        .tableOfContent-close {
+            display: none;
+        }
+
+        .tableOfContent-content {
+            border: 1px solid #bdbdbd;
+            margin-top: 20px;
+        }
+
+        .tableOfContent-heading {
+            border-bottom: 1px solid #bdbdbd;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .tableOfContent-title {
+            flex: 1;
+            padding-right: 10px;
+            font-size: 15px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        .tableOfContent-icon {
+            flex-shrink: 0;
+            width: 15px;
+
+            .minus {
+                display: none;
+            }
+            .plus {
+                display: block;
+            }
+        }
+
+        .tableOfContent-dropdown {
+            display: none;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #bdbdbd;
+
+            &__link {
+                padding: 10px 10px 2px;
+                display: block;
+                font-size: 15px;
+                line-height: 1.4;
+                color: #444;
+
+                &:hover,
+                &.active {
+                    color: #1e73be;
+                }
+
+                &.active {
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .tableOfContent-item {
+            &:last-child {
+                .tableOfContent-heading {
+                    border-bottom: 0;
+                }
+            }
+            &.active {
+                .plus {
+                    display: none;
+                }
+                .minus {
+                    display: block;
+                }
+                .tableOfContent-dropdown {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    // nut "Muc luc" noi tren di dong (an tren desktop)
+    &__menuFix {
+        position: fixed;
+        left: 0;
+        top: 50%;
+        z-index: 90;
+        padding: 10px 8px;
+        border-radius: 0 8px 8px 0;
+        background-color: $navy;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    &__menuFixLink {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        color: #fff !important;
+    }
+
+    &__menuFixIcon img {
+        width: 14px;
+        height: auto;
+    }
+
+    &__menuFixText {
+        font-size: 11px;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+    }
+
+    &__right {
+        padding-left: 40px;
+        color: $text;
+
+        p {
+            text-align: justify;
+            font-size: 18px;
+            line-height: 150%;
+
+            + p {
+                margin-top: 12px;
+            }
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        // tieu de muc (1.1, 1.2...)
+        .heading {
+            margin: 40px 0 20px;
+            padding: 14px 24px;
+            border-radius: 10px;
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 1.35;
+            color: #fff;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+
+        // tieu de nho trong noi dung (khung trang trong PDF)
+        .heading-small {
+            display: inline-block;
+            margin: 20px 0 12px;
+            padding: 6px 16px;
+            border-radius: 8px;
+            font-size: 17px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .list-dot {
+            margin: 10px 0 14px;
+
+            li {
+                position: relative;
+                padding-left: 24px;
+                font-size: 18px;
+                line-height: 150%;
+
+                + li {
+                    margin-top: 8px;
+                }
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    left: 6px;
+                    top: 0.62em;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        // "Bang 1.1" -> ban goc trong PDF
+        .table-caption {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin: 20px 0 12px;
+            padding: 10px 16px;
+            border: 2px dashed;
+            border-radius: 10px;
+            font-weight: 600;
+
+            a {
+                font-size: 15px;
+                font-weight: 500;
+                white-space: nowrap;
+                text-decoration: underline;
+            }
+        }
+
+        .figure {
+            margin: 20px 0;
+            text-align: center;
+
+            img {
+                display: inline-block;
+                max-width: min(100%, 520px);
+                height: auto;
+                border-radius: 12px;
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+            }
+
+            figcaption {
+                margin-top: 8px;
+                font-size: 15px;
+                font-style: italic;
+                color: #666;
+            }
+        }
+
+        // khung "LUU Y" (cung kieu .note cua ban goc)
+        .note {
+            display: flex;
+            align-items: center;
+            margin: 16px 0;
+            border: 3px solid #f16977;
+            border-radius: 10px;
+            padding: 15px;
+
+            &--yellow {
+                border-color: #fbf3bc;
+                background-color: #fbf3bc;
+                .note-img__inner {
+                    background-color: #f5ae43;
+                }
+            }
+
+            &-img {
+                width: 90px;
+                flex-shrink: 0;
+                padding: 0 10px;
+
+                &__inner {
+                    width: 56px;
+                    height: 56px;
+                    border-radius: 50%;
+                    margin: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        width: 10px;
+                    }
+                }
+            }
+
+            &-des {
+                flex: 1;
+            }
+        }
+
+        // --- cau hoi ---------------------------------------------------------
+        .part-question {
+            scroll-margin-top: 100px;
+        }
+
+        .three-item {
+            .text {
+                border-style: solid;
+            }
+
+            &__img1 {
+                width: 70px;
+                height: 70px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                color: #fff;
+                font-size: 36px;
+                font-weight: 700;
+                line-height: 1;
+            }
+
+            .text-number {
+                display: block;
+                margin-bottom: 4px;
+                font-size: 15px;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+
+            .text-1 {
+                line-height: 1.4;
+            }
+        }
+
+        .part-answer {
+            border-radius: 10px;
+            border: 3px solid;
+        }
+
+        .part-source {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 20px;
+            font-size: 14px;
+
+            a {
+                color: #777;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        // --- chuyen chuong truoc / sau ---------------------------------------
+        .chapter-pager {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 50px;
+
+            &__item {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+                padding: 18px 22px;
+                border-radius: 12px;
+                color: #fff !important;
+
+                small {
+                    font-size: 14px;
+                    opacity: 0.9;
+                }
+                strong {
+                    font-size: 17px;
+                    line-height: 1.35;
+                    text-transform: uppercase;
+                }
+
+                &--next {
+                    grid-column: 2;
+                    text-align: right;
+                }
+
+                @each $key, $c in $chapters {
+                    &.chapter-pager__item--#{$key} {
+                        background-color: map-get($c, main);
+                    }
+                }
+            }
+        }
+
+        // mau theo chuong
+        @each $key, $c in $chapters {
+            &.chapter-#{$key} {
+                $main: map-get($c, main);
+
+                .heading,
+                .heading-small,
+                .three-item__img1,
+                .list-dot li:before {
+                    background-color: $main;
+                }
+                .three-item .text,
+                .part-answer {
+                    border-color: $main;
+                }
+                .three-item .text-number,
+                .table-caption a {
+                    color: $main;
+                }
+                .table-caption {
+                    border-color: mix($main, #fff, 55%);
+                    background-color: mix($main, #fff, 8%);
+                }
+                .hotline-table th {
+                    background-color: $main;
+                }
+            }
+        }
+    }
+}
+// end chapter
+
+// thong tin bo sung: bang duong day nong
+.hotline-table {
+    width: 100%;
+    margin: 10px 0 30px;
+    border: 1px solid #d6dde6;
+
+    th,
+    td {
+        padding: 12px 14px;
+        border: 1px solid #d6dde6;
+        font-size: 17px;
+        line-height: 1.45;
+        text-align: left;
+        vertical-align: middle;
+    }
+
+    th {
+        color: #fff;
+        font-weight: 600;
+    }
+
+    tr:nth-child(even) td {
+        background-color: #f7f9fc;
+    }
+
+    &__phone {
+        width: 230px;
+    }
+
+    .call-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 7px 14px;
+        border-radius: 999px;
+        font-weight: 700;
+        color: #fff !important;
+        background-color: #e5484d;
+        white-space: nowrap;
+
+        img {
+            width: 14px;
+            filter: brightness(0) invert(1);
+        }
+
+        &:hover {
+            background-color: #c8363b;
+        }
+
+        &--web {
+            background-color: $blue-dark;
+        }
+    }
+
+    .hotline-note td {
+        font-style: italic;
+        color: #666;
+        background-color: #fff !important;
+    }
+}
+
+.province-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    &__btn {
+        padding: 9px 20px;
+        border: 1px solid #d6dde6;
+        border-radius: 999px;
+        font-weight: 600;
+        font-size: 16px;
+        background-color: #fff;
+        transition: all 0.2s ease;
+
+        &:hover {
+            border-color: #f0a92e;
+        }
+
+        &.active {
+            color: #fff;
+            border-color: #f0a92e;
+            background-color: #f0a92e;
+        }
+    }
+}
+
+.province-panel {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+
+    &__group {
+        margin: 10px 0;
+        font-size: 19px;
+        font-weight: 600;
+    }
+}
+
+// search
+.search-primary {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    &__form {
+        max-width: 490px;
+        width: 100%;
+        margin: 20px auto;
+
+        & .search-input {
+            height: 52px;
+            border: 1px solid #d6d6d6;
+            background-color: #fff;
+            border-radius: 999px;
+            padding: 12px 20px 12px 50px;
+            font-size: 21px;
+
+            &::placeholder {
+                color: #999;
+            }
+
+            &:focus {
+                border-color: #f16977;
+                color: #f16977;
+
+                &::placeholder {
+                    color: #f16977;
+                }
+                ~ .search-btn {
+                    color: #f16977;
+                }
+            }
+        }
+        & .search-btn {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            width: 20px;
+            color: #666;
+        }
+    }
+
+    &__hint {
+        margin-bottom: 14px;
+        text-align: center;
+        color: #666;
+    }
+
+    .result-list {
+        padding-top: 20px;
+        border-top: 1px solid #d3d3d3;
+    }
+
+    .result-item {
+        border: 1px solid #e1e5eb;
+        background-color: #fff;
+        padding: 14px;
+        margin-bottom: 10px;
+
+        &__tag {
+            display: inline-block;
+            margin-bottom: 6px;
+            padding: 2px 10px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        &__link1 {
+            display: block;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 1.4;
+            color: #192a3d;
+
+            &:hover {
+                color: $blue-dark;
+            }
+        }
+
+        &__des {
+            margin-top: 6px;
+            font-size: 15px;
+            line-height: 1.5;
+            color: #666;
+        }
+
+        &__bot {
+            margin-top: 10px;
+        }
+
+        &__link3 {
+            display: inline-flex;
+            align-items: center;
+            background-color: #086cb7;
+            border-radius: 3px;
+            padding: 8px 15px 6px;
+            font-size: 15px;
+            color: #fff;
+
+            &:hover {
+                color: #fff;
+                opacity: 0.9;
+            }
+        }
+
+        @each $key, $c in $chapters {
+            &--#{$key} .result-item__tag {
+                background-color: map-get($c, main);
+            }
+        }
+    }
+
+    mark {
+        padding: 0 2px;
+        border-radius: 3px;
+        background-color: #ffe58a;
+    }
+
+    .result-empty {
+        padding: 30px 0;
+        text-align: center;
+        color: #666;
+    }
+}
+// end search

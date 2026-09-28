@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Tìm kiếm câu hỏi trong Sổ tay sức khỏe cho người lao động di cư trong nước." />
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="57x57" href="./images/favicon/apple-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="60x60" href="./images/favicon/apple-icon-60x60.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="./images/favicon/apple-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="./images/favicon/apple-icon-76x76.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="./images/favicon/apple-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="./images/favicon/apple-icon-120x120.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="./images/favicon/apple-icon-144x144.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="./images/favicon/apple-icon-152x152.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-icon-180x180.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="./images/favicon/android-icon-192x192.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="96x96" href="./images/favicon/favicon-96x96.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="msapplication-TileImage" content="./images/favicon/ms-icon-144x144.png" />
+        <meta name="theme-color" content="#ffffff" />
+        <!-- end favicon -->
+        <title>Tìm kiếm | Sổ tay sức khỏe cho người lao động di cư trong nước</title>
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+        <!-- end font -->
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+
+    <body>
+        <!-- header -->
+        <header id="header" class="header relative js__stickyHeader">
+            <!-- pc -->
+            <div class="header-container w-1290">
+                <div class="header-top d-3xl-flex items-center justify-between">
+                    <!-- logo -->
+                    <div class="header-logo flex-0">
+                        <a href="./index.html" class="header-logo__link"><img src="./images/logo-trang-1.png" alt="MHWG" class="header-logo__img"></a>
+                    </div>
+                    <!-- logo -->
+                    <div class="header-right flex-1 d-3xl-flex items-center gap-24">
+                        <!-- search -->
+                        <div class="header-search js__searchContainer">
+                            <div class="header-search__icon js__searchIcon">
+                                <img src="./images/svg/search.svg" alt="Tìm kiếm">
+                            </div>
+                            <div class="header-search__wrapper js__searchContent">
+                                <div class="header-search__close js__closeSearch">
+                                    <img src="./images/svg/close-w.svg" alt="Đóng">
+                                </div>
+                                <div class="header-search__form">
+                                    <form action="./tim_kiem.html" method="get" class="relative">
+                                        <input type="text" name="s" class="search-input w-full h-full js__searchInput" placeholder="Tìm kiếm câu hỏi..." autocomplete="off">
+                                        <button type="submit" class="search-btn" aria-label="Tìm kiếm">
+                                            <svg class="ct-icon" aria-hidden="true" width="15" height="15" viewBox="0 0 15 15"><path d="M14.8,13.7L12,11c0.9-1.2,1.5-2.6,1.5-4.2c0-3.7-3-6.8-6.8-6.8S0,3,0,6.8s3,6.8,6.8,6.8c1.6,0,3.1-0.6,4.2-1.5l2.8,2.8c0.1,0.1,0.3,0.2,0.5,0.2s0.4-0.1,0.5-0.2C15.1,14.5,15.1,14,14.8,13.7z M1.5,6.8c0-2.9,2.4-5.2,5.2-5.2S12,3.9,12,6.8S9.6,12,6.8,12S1.5,9.6,1.5,6.8z" fill="currentColor"></path></svg>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end search -->
+                        <!-- navbar -->
+                        <ul class="navbar d-3xl-flex items-center gap-24">
+                            <!-- item -->
+                            <li class="navbar-item">
+                                <div class="navbar-item__top d-3xl-flex items-center gap-10">
+                                    <a href="./index.html" class="navbar-item__link">Handbook</a>
+                                    <div class="navbar-item__icon">
+                                        <svg class="ct-icon" width="8" height="8" viewBox="0 0 15 15"><path d="M2.1,3.2l5.4,5.4l5.4-5.4L15,4.3l-7.5,7.5L0,4.3L2.1,3.2z" fill="currentColor"></path></svg>
+                                    </div>
+                                </div>
+                                <div class="navbar-dropdown-wrapper">
+                                    <ul class="navbar-dropdown">
+                                        <li class="navbar-dropdown__item fs-15">
+                                            <a href="./gioi_thieu.html" class="navbar-dropdown__link">Giới thiệu: Lời nói đầu và hướng dẫn sử dụng sổ tay</a>
+                                        </li>
+                                        <li class="navbar-dropdown__item fs-15">
+                                            <a href="./chapter_1.html" class="navbar-dropdown__link">Chương 1: Cơ sở y tế và các chính sách bảo hiểm</a>
+                                        </li>
+                                        <li class="navbar-dropdown__item fs-15">
+                                            <a href="./chapter_2.html" class="navbar-dropdown__link">Chương 2: An toàn lao động và sức khỏe nghề nghiệp</a>
+                                        </li>
+                                        <li class="navbar-dropdown__item fs-15">
+                                            <a href="./chapter_3.html" class="navbar-dropdown__link">Chương 3: Chăm sóc sức khoẻ và môi trường sống</a>
+                                        </li>
+                                        <li class="navbar-dropdown__item fs-15">
+                                            <a href="./chapter_4.html" class="navbar-dropdown__link">Chương 4: Phòng ngừa bệnh tật</a>
+                                        </li>
+                                        <li class="navbar-dropdown__item fs-15">
+                                            <a href="./thong_tin_bo_sung.html" class="navbar-dropdown__link">Thông tin bổ sung: Đường dây nóng và cơ sở y tế</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- end item -->
+                            <!-- item -->
+                            <li class="navbar-item">
+                                <div class="navbar-item__top d-3xl-flex items-center gap-10">
+                                    <a href="https://mhwg.org.vn/" class="navbar-item__link" target="_blank" rel="noopener">Tin tức</a>
+                                </div>
+                            </li>
+                            <!-- end item -->
+                            <!-- item -->
+                            <li class="navbar-item">
+                                <div class="navbar-item__top d-3xl-flex items-center gap-10">
+                                    <a href="https://mhwg.org.vn/vi/lien-he/" class="navbar-item__link" target="_blank" rel="noopener">Liên hệ</a>
+                                </div>
+                            </li>
+                            <!-- end item -->
+                            <!-- item -->
+                            <li class="navbar-item">
+                                <div class="navbar-item__top d-3xl-flex items-center gap-10">
+                                    <a href="./gioi_thieu.html" class="navbar-item__link">Về chúng tôi</a>
+                                </div>
+                            </li>
+                            <!-- end item -->
+                            <!-- item -->
+                            <li class="navbar-item navbar-item-languageWrapper">
+                                <div class="navbar-item__top d-3xl-flex items-center gap-10">
+                                    <a href="./index.html" class="navbar-item__link navbar-item__language">
+                                        <div class="navbar-item__flag-icon">
+                                            <img src="./images/flag-vi.png" alt="">
+                                        </div>
+                                        <span class="navbar-item__text">Tiếng việt</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <!-- end item -->
+                        </ul>
+                        <!-- end navbar -->
+
+                        <!-- menu mobile -->
+                        <div class="sub-menu d-3xl-none d-lg-block">
+                            <!-- icon bar -->
+                            <div class="icon-bar js__clickShowMenuMb px-15 py-10">
+                                <img src="./images/svg/bar-w.svg" alt="Menu">
+                            </div>
+                            <!-- end icon bar -->
+                            <!-- content -->
+                            <div class="sub-menu__content">
+                                <!-- close -->
+                                <div class="sub-menu__close js__closeSubMenu h-56 p-4 mb-8 d-3xl-flex items-center text-white">
+                                    <img src="./images/svg/close-w.svg" alt="Đóng">
+                                </div>
+                                <!-- end close -->
+
+                                <div class="sub-menu__container">
+                                    <!-- list -->
+                                    <div class="sub-menu__list">
+                                        <!-- item -->
+                                        <div class="sub-menu__item">
+                                            <!-- heading -->
+                                            <div class="heading-sub js__dropDown d-3xl-flex items-center justify-between px-16 py-8 text-white">
+                                                <a href="./index.html" class="heading-sub__title fs-16 fw-500">Handbook</a>
+                                                <div class="heading-sub__arrow">
+                                                    <img src="./images/svg/arrow-down-w.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <!-- end heading -->
+                                            <!-- sub menu list -->
+                                            <ul class="list-sub js__listSubMenu">
+                                                <li class="item-sub">
+                                                    <a href="./gioi_thieu.html" class="item-sub__link fs-16">Giới thiệu: Lời nói đầu và hướng dẫn sử dụng sổ tay</a>
+                                                </li>
+                                                <li class="item-sub">
+                                                    <a href="./chapter_1.html" class="item-sub__link fs-16">Chương 1: Cơ sở y tế và các chính sách bảo hiểm</a>
+                                                </li>
+                                                <li class="item-sub">
+                                                    <a href="./chapter_2.html" class="item-sub__link fs-16">Chương 2: An toàn lao động và sức khỏe nghề nghiệp</a>
+                                                </li>
+                                                <li class="item-sub">
+                                                    <a href="./chapter_3.html" class="item-sub__link fs-16">Chương 3: Chăm sóc sức khoẻ và môi trường sống</a>
+                                                </li>
+                                                <li class="item-sub">
+                                                    <a href="./chapter_4.html" class="item-sub__link fs-16">Chương 4: Phòng ngừa bệnh tật</a>
+                                                </li>
+                                                <li class="item-sub">
+                                                    <a href="./thong_tin_bo_sung.html" class="item-sub__link fs-16">Thông tin bổ sung: Đường dây nóng và cơ sở y tế</a>
+                                                </li>
+                                            </ul>
+                                            <!-- end sub menu list -->
+                                        </div>
+                                        <!-- end item -->
+                                        <!-- item -->
+                                        <div class="sub-menu__item">
+                                            <div class="heading-sub d-3xl-flex items-center justify-between px-16 py-8 text-white">
+                                                <a href="https://mhwg.org.vn/" class="heading-sub__title fs-16 fw-500" target="_blank" rel="noopener">Tin tức</a>
+                                            </div>
+                                        </div>
+                                        <!-- end item -->
+                                        <!-- item -->
+                                        <div class="sub-menu__item">
+                                            <div class="heading-sub d-3xl-flex items-center justify-between px-16 py-8 text-white">
+                                                <a href="https://mhwg.org.vn/vi/lien-he/" class="heading-sub__title fs-16 fw-500" target="_blank" rel="noopener">Liên hệ</a>
+                                            </div>
+                                        </div>
+                                        <!-- end item -->
+                                        <!-- item -->
+                                        <div class="sub-menu__item">
+                                            <div class="heading-sub d-3xl-flex items-center justify-between px-16 py-8 text-white">
+                                                <a href="./gioi_thieu.html" class="heading-sub__title fs-16 fw-500">Về chúng tôi</a>
+                                            </div>
+                                        </div>
+                                        <!-- end item -->
+                                    </div>
+                                    <!-- end list -->
+                                </div>
+                            </div>
+                            <!-- end content -->
+                            <div class="overlay js__overlay"></div>
+                        </div>
+                        <!-- end menu mobile -->
+                    </div>
+                </div>
+            </div>
+            <!-- end pc -->
+        </header>
+        <!-- end header -->
+        <!-- main -->
+        <main id="main" class="main">
+            <!-- search -->
+            <section class="search-primary relative z-20 w-wrapper">
+                <div class="search-primary__container w-1290">
+                    <h1 class="heading-primary text-center">Tìm kiếm câu hỏi</h1>
+                    <form action="./tim_kiem.html" method="get" class="search-primary__form relative">
+                        <input type="text" name="s" class="search-input w-full js__searchPageInput" placeholder="Nhập từ khoá, ví dụ: bảo hiểm y tế" autocomplete="off">
+                        <button type="submit" class="search-btn" aria-label="Tìm kiếm">
+                            <svg class="ct-icon" aria-hidden="true" width="15" height="15" viewBox="0 0 15 15"><path d="M14.8,13.7L12,11c0.9-1.2,1.5-2.6,1.5-4.2c0-3.7-3-6.8-6.8-6.8S0,3,0,6.8s3,6.8,6.8,6.8c1.6,0,3.1-0.6,4.2-1.5l2.8,2.8c0.1,0.1,0.3,0.2,0.5,0.2s0.4-0.1,0.5-0.2C15.1,14.5,15.1,14,14.8,13.7z M1.5,6.8c0-2.9,2.4-5.2,5.2-5.2S12,3.9,12,6.8S9.6,12,6.8,12S1.5,9.6,1.5,6.8z" fill="currentColor"></path></svg>
+                        </button>
+                    </form>
+                    <p class="search-primary__hint js__searchHint">Tìm trong toàn bộ câu hỏi của sổ tay. Có thể gõ không dấu.</p>
+                    <div class="result-list js__searchResult"></div>
+                </div>
+            </section>
+            <!-- end search -->
+        </main>
+        <!-- end main -->
+        <!-- footer -->
+        <footer id="footer" class="footer w-wrapper z-20 relative">
+            <div class="footer-top w-1290">
+                <div class="footer-brand">
+                    <a href="./index.html" class="footer-logo"><img src="./images/logo-trang-1.png" alt="MHWG"></a>
+                    <p class="footer-des">Nhóm Kỹ thuật Sức khỏe Người di cư Việt Nam (MHWG). Sổ tay được biên soạn với sự tài trợ của Tổ chức Di cư Quốc tế (IOM), không nhằm mục đích thương mại. Thông tin chỉ mang tính tham khảo, không thay thế tư vấn pháp lý hay y tế.</p>
+                </div>
+                <div>
+                    <h3 class="footer-title">Nội dung sổ tay</h3>
+                    <div class="footer-links">
+                        <a href="./gioi_thieu.html">Giới thiệu: Lời nói đầu và hướng dẫn sử dụng sổ tay</a>
+                        <a href="./chapter_1.html">Chương 1: Cơ sở y tế và các chính sách bảo hiểm</a>
+                        <a href="./chapter_2.html">Chương 2: An toàn lao động và sức khỏe nghề nghiệp</a>
+                        <a href="./chapter_3.html">Chương 3: Chăm sóc sức khoẻ và môi trường sống</a>
+                        <a href="./chapter_4.html">Chương 4: Phòng ngừa bệnh tật</a>
+                        <a href="./thong_tin_bo_sung.html">Thông tin bổ sung: Đường dây nóng và cơ sở y tế</a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="footer-title">Liên kết</h3>
+                    <div class="footer-links">
+                        <a href="./document/so-tay-suc-khoe-nguoi-lao-dong-di-cu.pdf" download>Tải sổ tay (PDF)</a>
+                        <a href="https://mhwg.org.vn/thu-vien/" target="_blank" rel="noopener">Thư viện tài liệu MHWG</a>
+                        <a href="https://mhwg.org.vn/vi/lien-he/" target="_blank" rel="noopener">Góp ý, liên hệ</a>
+                        <a href="tel:115">Cấp cứu y tế: 115</a>
+                    </div>
+                </div>
+            </div>
+            <p class="footer-text text-center fs-15">© 2026 Nhóm Kỹ thuật Sức khỏe Người di cư Việt Nam (MHWG). Nội dung cập nhật đến tháng 4/2026.</p>
+            <!-- back top -->
+            <div id="back-top">
+                <img src="./images/svg/arrow-top-w.svg" alt="Lên đầu trang">
+            </div>
+            <!-- end back top -->
+        </footer>
+        <!-- end footer -->
+        <!-- hotline -->
+        <a href="./thong_tin_bo_sung.html" class="hotline-fixed" aria-label="Đường dây nóng">
+            <img src="./images/tong-dai.png" alt="">
+            <span class="hotline-fixed__tip">Đường dây nóng</span>
+        </a>
+        <!-- end hotline -->
+        <script src="./js/search-data.js"></script>
+        <script src="./js/main.js"></script>
+    </body>
+</html>

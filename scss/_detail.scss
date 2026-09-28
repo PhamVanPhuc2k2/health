@@ -1,0 +1,27 @@
+// detail: phan gioi thieu (loi noi dau, nhan vat)
+.character-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin: 16px 0 24px;
+}
+
+.character-item {
+    padding: 18px 20px;
+    border: 2px solid #d9e6f5;
+    border-radius: 14px;
+    background-color: #f7fbff;
+
+    &__name {
+        margin-bottom: 8px;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.4;
+        color: #f07f22;
+    }
+
+    p {
+        font-size: 17px !important;
+        text-align: left !important;
+    }
+}

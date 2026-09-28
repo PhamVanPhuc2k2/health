@@ -1,0 +1,449 @@
+// max width 1536px
+@media (max-width: 1536px) {
+    .d-2xl-none {
+        display: none;
+    }
+    .d-2xl-block {
+        display: block;
+    }
+    .d-2xl-flex {
+        display: flex;
+    }
+    .d-2xl-grid {
+        display: grid;
+    }
+    // --------------------------------------------------------------------header
+    .w-1290 {
+        max-width: 1230px;
+    }
+}
+
+// max width 1280px
+@media (max-width: 1280px) {
+    .d-xl-none {
+        display: none;
+    }
+    .d-xl-block {
+        display: block;
+    }
+    .d-xl-flex {
+        display: flex;
+    }
+    .d-xl-grid {
+        display: grid;
+    }
+    // --------------------------------------------------------------------header
+    .w-1290 {
+        max-width: 100%;
+    }
+    .header .navbar {
+        gap: 16px;
+    }
+    // --------------------------------------------------------------------index
+    .handbook-item__title {
+        font-size: 22px;
+    }
+    // --------------------------------------------------------------------cate
+    .chapter-primary__content {
+        padding-right: 60px;
+    }
+}
+
+// max width 1024px
+@media (max-width: 1024px) {
+    .d-lg-none {
+        display: none;
+    }
+    .d-lg-block {
+        display: block;
+    }
+    .d-lg-flex {
+        display: flex;
+    }
+    .d-lg-grid {
+        display: grid;
+    }
+    // --------------------------------------------------------------------header
+    // menu ngang an di, dung nut mo menu ben phai (sub-menu)
+    .header .navbar {
+        .navbar-item {
+            display: none;
+            &:last-child {
+                display: block;
+            }
+        }
+    }
+    // --------------------------------------------------------------------index
+    .handbook-primary__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .handbook-item {
+        &:nth-child(3n) .handbook-item__tab {
+            left: 0;
+            right: auto;
+            border-radius: 0 22px 22px 0;
+        }
+        &:nth-child(2n) .handbook-item__tab {
+            left: auto;
+            right: 0;
+            border-radius: 22px 0 0 22px;
+        }
+    }
+    .download-block {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    // --------------------------------------------------------------------cate
+    .chapter-secondary {
+        // bo stacking context (z-20) de ngan keo muc luc noi len tren header
+        &.z-20 {
+            z-index: auto;
+        }
+
+        &__left {
+            width: auto;
+        }
+
+        // muc luc thanh ngan keo tu trai
+        &__tableOfContent {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 1001;
+            width: min(360px, 88vw);
+            max-height: none;
+            padding: 16px;
+            background-color: #fff;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+            transform: translateX(-105%);
+            transition: transform 0.25s ease;
+
+            &.active {
+                transform: translateX(0);
+            }
+
+            .tableOfContent-close {
+                display: flex;
+                justify-content: flex-end;
+                margin-bottom: 6px;
+                font-size: 26px;
+                line-height: 1;
+                cursor: pointer;
+                color: $text;
+            }
+        }
+
+        &__overlay.active {
+            opacity: 1;
+            visibility: visible;
+            z-index: 1000;
+        }
+
+        &__right {
+            padding-left: 0;
+            width: 100%;
+        }
+    }
+}
+
+// max width 992px
+@media (max-width: 992px) {
+    // --------------------------------------------------------------------header
+    .header {
+        padding: 10px 0;
+        &.sticky {
+            padding: 8px 0;
+
+            .header-logo__img {
+                height: 45px;
+            }
+        }
+
+        &-logo {
+            &__img {
+                height: 50px;
+            }
+        }
+        &-search {
+            &__form {
+                max-width: 690px;
+            }
+        }
+    }
+    // --------------------------------------------------------------------cate
+    .chapter-primary {
+        &__content {
+            padding-right: 20px;
+        }
+        &__img {
+            width: 240px;
+            min-height: 240px;
+        }
+    }
+    .footer-top {
+        grid-template-columns: 1fr 1fr;
+    }
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+}
+
+// max width 768px
+@media (max-width: 768px) {
+    .d-md-none {
+        display: none;
+    }
+    .d-md-block {
+        display: block;
+    }
+    .d-md-flex {
+        display: flex;
+    }
+    .d-md-grid {
+        display: grid;
+    }
+    .w-sm-100 {
+        width: 100% !important;
+    }
+    // --------------------------------------------------------------------cate
+    .chapter-secondary__right {
+        p,
+        .list-dot li {
+            font-size: 16px;
+        }
+        .heading {
+            font-size: 20px;
+        }
+        .chapter-pager {
+            grid-template-columns: 1fr;
+
+            &__item--next {
+                grid-column: 1;
+            }
+        }
+    }
+    .character-list {
+        grid-template-columns: 1fr;
+    }
+    .hotline-table {
+        th,
+        td {
+            font-size: 15px;
+        }
+        &__phone {
+            width: auto;
+        }
+    }
+}
+
+// max width 640px
+@media (max-width: 640px) {
+    .d-sm-none {
+        display: none;
+    }
+    .d-sm-block {
+        display: block;
+    }
+    .d-sm-flex {
+        display: flex;
+    }
+    .d-sm-grid {
+        display: grid;
+    }
+
+    // --------------------------------------------------------------------header
+    .w-wrapper {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .header {
+        padding-left: 16px;
+        padding-right: 16px;
+        &.sticky {
+            padding: 8px 16px;
+        }
+        &-right {
+            gap: 10px;
+        }
+        &-search__form {
+            padding-left: 20px;
+            padding-right: 20px;
+            .search-btn {
+                width: 40px;
+                height: 40px;
+            }
+            .search-input {
+                height: 60px;
+                font-size: 22px;
+            }
+        }
+    }
+    .sub-menu {
+        .heading-sub__title {
+            font-size: 18px;
+        }
+        .item-sub__link {
+            font-size: 15px;
+        }
+    }
+    .sub-menu__content {
+        width: 90vw;
+    }
+    // --------------------------------------------------------------------index
+    .heading-primary {
+        font-size: 22px;
+    }
+    .handbook-primary {
+        padding-top: 30px;
+
+        &__list {
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+    }
+    .handbook-item {
+        aspect-ratio: auto;
+        min-height: 440px;
+
+        &:nth-child(n) .handbook-item__tab {
+            left: 0;
+            right: auto;
+            border-radius: 0 22px 22px 0;
+        }
+        &__img {
+            flex: none;
+            height: 260px;
+        }
+        &__content {
+            padding-top: 16px;
+            padding-bottom: 22%;
+        }
+    }
+    .download-block {
+        padding: 22px;
+    }
+    // --------------------------------------------------------------------cate
+    .chapter-primary {
+        padding-bottom: 20px;
+        &__container {
+            display: block;
+            min-height: 0;
+        }
+        &__content {
+            padding: 20px 0;
+        }
+        &__heading {
+            font-size: 22px;
+
+            &-inner {
+                padding: 16px 50px 16px 20px;
+            }
+        }
+        &__title {
+            font-size: 20px;
+        }
+        &__img {
+            width: 100%;
+            min-height: 0;
+            border-radius: 12px;
+
+            img {
+                width: 60%;
+                max-height: 180px;
+            }
+        }
+    }
+    .chapter-secondary {
+        &__right {
+            .heading {
+                padding: 12px 16px;
+                font-size: 18px;
+            }
+            .three-item {
+                &__img1 {
+                    width: 46px;
+                    height: 46px;
+                    font-size: 24px;
+                }
+                .text {
+                    padding: 10px;
+                    font-size: 16px;
+                    margin-right: 0;
+                }
+                .text-1 {
+                    font-size: 17px;
+                }
+            }
+            .part-answer {
+                padding: 12px;
+            }
+            .note {
+                display: block;
+
+                &-img {
+                    width: auto;
+                    padding: 0 0 10px;
+
+                    &__inner {
+                        margin: 0;
+                    }
+                }
+            }
+            .table-caption {
+                display: block;
+
+                a {
+                    display: block;
+                    margin-top: 6px;
+                }
+            }
+        }
+    }
+    .hotline-table {
+        tr {
+            display: block;
+            border-bottom: 1px solid #d6dde6;
+        }
+        th {
+            display: none;
+        }
+        td {
+            display: block;
+            border: 0;
+        }
+    }
+    .search-primary {
+        &__form {
+            .search-btn {
+                width: 15px;
+            }
+            .search-input {
+                height: 44px;
+                font-size: 16px;
+            }
+        }
+        .result-item {
+            &__link1 {
+                font-size: 17px;
+            }
+            &__link3 {
+                font-size: 13px;
+            }
+        }
+    }
+    .hotline-fixed {
+        width: 62px;
+        height: 50px;
+        bottom: 80px;
+
+        img {
+            width: 28px;
+            height: 28px;
+        }
+    }
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
