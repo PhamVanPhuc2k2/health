@@ -362,9 +362,10 @@
             }
             .three-item {
                 &__img1 {
-                    width: 46px;
-                    height: 46px;
-                    font-size: 24px;
+                    width: 56px;
+                    height: 56px;
+                    border-width: 2px;
+                    padding: 2px;
                 }
                 .text {
                     padding: 10px;
@@ -377,6 +378,18 @@
             }
             .part-answer {
                 padding: 12px;
+            }
+            .icon-row {
+                gap: 12px;
+
+                &__icons {
+                    flex-basis: 52px;
+
+                    img {
+                        max-width: 52px;
+                        max-height: 52px;
+                    }
+                }
             }
             .note {
                 display: block;

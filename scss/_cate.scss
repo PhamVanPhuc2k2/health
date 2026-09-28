@@ -315,12 +315,53 @@
                 box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
             }
 
+
             figcaption {
                 margin-top: 8px;
                 font-size: 15px;
                 font-style: italic;
                 color: #666;
             }
+        }
+
+        // icon nho trong so tay: dung ben trai, cung hang voi doan chu no minh hoa
+        .icon-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            margin: 10px 0 14px;
+
+            &__icons {
+                flex: 0 0 76px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+
+                img {
+                    max-width: 76px;
+                    max-height: 76px;
+                    width: auto;
+                    height: auto;
+                    object-fit: contain;
+                }
+            }
+
+            &__body {
+                flex: 1;
+                min-width: 0;
+
+                > :first-child {
+                    margin-top: 0;
+                }
+                > :last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .heading-small {
+            display: table;
         }
 
         // khung "LUU Y" (cung kieu .note cua ban goc)
@@ -375,17 +416,22 @@
                 border-style: solid;
             }
 
+            // anh nhan vat dat canh cau hoi (lay tu so tay)
             &__img1 {
-                width: 70px;
-                height: 70px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                width: 78px;
+                height: 78px;
+                padding: 3px;
                 border-radius: 50%;
-                color: #fff;
-                font-size: 36px;
-                font-weight: 700;
-                line-height: 1;
+                border: 3px solid;
+                background-color: #fff;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    border-radius: 50%;
+                }
             }
 
             .text-number {
@@ -404,6 +450,13 @@
         .part-answer {
             border-radius: 10px;
             border: 3px solid;
+
+            // chua hinh nho float ben phai
+            &::after {
+                content: "";
+                display: block;
+                clear: both;
+            }
         }
 
         .part-source {
@@ -467,11 +520,11 @@
 
                 .heading,
                 .heading-small,
-                .three-item__img1,
                 .list-dot li:before {
                     background-color: $main;
                 }
                 .three-item .text,
+                .three-item__img1,
                 .part-answer {
                     border-color: $main;
                 }

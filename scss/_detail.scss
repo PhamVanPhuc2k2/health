@@ -7,10 +7,26 @@
 }
 
 .character-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
     padding: 18px 20px;
     border: 2px solid #d9e6f5;
     border-radius: 14px;
     background-color: #f7fbff;
+
+    &__img {
+        flex-shrink: 0;
+        width: 84px;
+        height: 84px;
+        border-radius: 50%;
+        object-fit: cover;
+        background-color: #fff;
+    }
+
+    &__content {
+        flex: 1;
+    }
 
     &__name {
         margin-bottom: 8px;

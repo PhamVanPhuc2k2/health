@@ -269,6 +269,28 @@ document.addEventListener("DOMContentLoaded", function () {
             .join("");
     }
 
+    // Mở link có #chapter-x__y: font web tải xong làm chữ xuống dòng lại, trang ngắn đi
+    // nên vị trí trình duyệt đã cuộn tới bị lệch -> căn lại khi font + ảnh đã sẵn sàng
+    function handleHashAfterLoad() {
+        if (!location.hash) return;
+        var target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+        if (!target) return;
+        var userScrolled = false;
+        ["wheel", "touchmove", "keydown"].forEach((ev) =>
+            window.addEventListener(ev, () => (userScrolled = true), { once: true, passive: true })
+        );
+
+        function realign() {
+            if (!userScrolled) target.scrollIntoView({ behavior: "auto", block: "start" });
+        }
+        var fontsReady = document.fonts ? document.fonts.ready : Promise.resolve();
+        var pageLoaded = new Promise((resolve) => {
+            if (document.readyState === "complete") resolve();
+            else window.addEventListener("load", resolve, { once: true });
+        });
+        Promise.all([fontsReady, pageLoaded]).then(realign);
+    }
+
     // Xử lý thanh header dính: giữ chỗ để nội dung không bị giật lên
     function handleStickyHeader() {
         if (stickyHeaderPC) {
@@ -310,6 +332,7 @@ document.addEventListener("DOMContentLoaded", function () {
         handleActiveTableOfContent();
         handleProvinceTabs();
         handleSearchPage();
+        handleHashAfterLoad();
         // scroll
         handleWindowScroll();
         handleStickyHeader();
